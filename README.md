@@ -115,7 +115,7 @@ There's no difference.
 
 2. Why do tables need a Primary Key?
 
-Primary keys are used to uniquely every part of information inputted into the table
+Primary keys are used to uniquely identify every part of information inputted into the table
 
 3. What is the name given to a table column that references the Primary Key on another table?
 
