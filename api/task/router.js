@@ -5,12 +5,14 @@ const Task = require('./model');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    Task.getTasks()
-        .then(tasks => {
-            res.json(tasks)
-        })
-        .catch(next)
+router.get('/', async (req, res, next) => {
+    try {
+        const tasks = await Task.getTasks()
+        res.json(tasks)
+    }
+    catch (err) {
+        next(err)
+    }
 })
 
 router.post('/', async (req, res, next) => {
